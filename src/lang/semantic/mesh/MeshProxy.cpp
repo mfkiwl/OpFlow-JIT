@@ -10,19 +10,18 @@
 //
 // ----------------------------------------------------------------------------
 
-#include "Mesh.hpp"
-#include "utils/Macros.hpp"
+#include "MeshProxy.hpp"
+#include "lang/semantic/Field.hpp"
 
 namespace OpFlow::lang {
-    Mesh::Mesh() = default;
-    Mesh::~Mesh() noexcept = default;
-    MeshProxy Mesh::location(LocOnMesh loc) { return {this, MeshLocDescriptor {this, loc}}; }
+    MeshLocDescriptor::MeshLocDescriptor() = default;
 
-    bool Mesh::is_dynamic() const { return is_dynamic_; }
-    void Mesh::mark_as_dynamic() { is_dynamic_ = true; }
+    MeshProxy::MeshProxy(const Mesh *mesh, MeshLocDescriptor descriptor)
+        : mesh_(mesh), descriptor_(descriptor) {}
 
-    void layout(const std::function<void()> &describer) {
-        describer();
-        OP_NOT_IMPLEMENTED;
+    void MeshProxy::place(Field &field) { field.bind_to_mesh(this->mesh_, this->descriptor_); }
+
+    void MeshProxy::place(FieldGroup &fieldGroup) {
+        for (auto &f : fieldGroup) { place(*f); }
     }
 }// namespace OpFlow::lang
