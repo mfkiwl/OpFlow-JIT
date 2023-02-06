@@ -28,6 +28,6 @@ namespace OpFlow::lang {
         LocOnMesh loc_ = LocOnMesh::Undefined;
         const Mesh* base_mesh_ = nullptr;
     };
-}
+}// namespace OpFlow::lang
 
 #endif//OPFLOW_JIT_MESHLOCDESCRIPTOR_HPP

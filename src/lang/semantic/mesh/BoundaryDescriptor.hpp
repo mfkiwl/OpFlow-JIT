@@ -16,8 +16,7 @@
 namespace OpFlow::lang {
     class BoundaryDescriptor {
     public:
-
     };
-}
+}// namespace OpFlow::lang
 
 #endif//OPFLOW_JIT_BOUNDARYDESCRIPTOR_HPP

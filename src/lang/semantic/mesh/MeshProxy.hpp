@@ -30,6 +30,6 @@ namespace OpFlow::lang {
         MeshLocDescriptor descriptor_;
         const Mesh* mesh_ = nullptr;
     };
-}
+}// namespace OpFlow::lang
 
 #endif//OPFLOW_JIT_MESHPROXY_HPP
