@@ -21,8 +21,6 @@ namespace OpFlow::lang {
             if (auto ker = prog.get_current_kernel()) {
                 // standalone kernel
 
-            } else if (prog.is_interactive_mode()) {
-                // push stmt into global kernel
             } else {
                 OP_ERROR("Assignment not in any kernel scope");
             }

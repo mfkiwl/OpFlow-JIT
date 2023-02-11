@@ -31,6 +31,7 @@ namespace OpFlow::lang {
 
         Block* get_parent_block();
         [[nodiscard]] const Block* get_parent_block() const;
+        void set_parent(Block* parent);
 
         [[nodiscard]] std::string get_name() const;
         [[nodiscard]] std::string get_raw_name() const;
