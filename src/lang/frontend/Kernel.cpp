@@ -11,8 +11,9 @@
 // ----------------------------------------------------------------------------
 
 #include "Kernel.hpp"
-#include "utils/Macros.hpp"
 #include "lang/program/Program.hpp"
+#include "lang/pass/IRPrinter.hpp"
+#include "utils/Macros.hpp"
 
 namespace OpFlow::lang {
     Kernel::Kernel(const std::function<void()> &func) {
@@ -32,6 +33,8 @@ namespace OpFlow::lang {
     }
 
     void Kernel::compile() const {
+        IRPrinter::run(ir_root_.get());
+        compiled_kernel_ = [](auto &&) {};
         OP_NOT_IMPLEMENTED;
     }
 }// namespace OpFlow::lang

@@ -17,13 +17,8 @@
 namespace OpFlow::lang {
     Var &Scalar::operator=(const Expr &other) {
         if (this != &other) {
-            auto &prog = Program::get_current_program();
-            if (auto ker = prog.get_current_kernel()) {
-                // standalone kernel
-
-            } else {
-                OP_ERROR("Assignment not in any kernel scope");
-            }
+            auto* ir_builder = IRBuilder::get_current_builder();
+            OP_ASSERT(ir_builder);
         }
         return *this;
     }
