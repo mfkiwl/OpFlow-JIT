@@ -43,6 +43,6 @@ namespace OpFlow::lang {
         static IRBuilder* current_ir_builder_;
         std::vector<Block*> ir_stack_;
     };
-}
+}// namespace OpFlow::lang
 
 #endif//OPFLOW_JIT_IRBUILDER_HPP

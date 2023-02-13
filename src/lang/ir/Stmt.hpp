@@ -67,6 +67,6 @@ namespace OpFlow::lang {
         static std::atomic_int instance_counter_;
         std::vector<Stmt*> operands_;
     };
-}
+}// namespace OpFlow::lang
 
 #endif//OPFLOW_JIT_STMT_HPP

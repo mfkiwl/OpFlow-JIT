@@ -14,9 +14,7 @@
 #define OPFLOW_JIT_RUNTIMECONTEXT_HPP
 
 namespace OpFlow::lang {
-    class RuntimeContext {
-
-    };
-}
+    class RuntimeContext {};
+}// namespace OpFlow::lang
 
 #endif//OPFLOW_JIT_RUNTIMECONTEXT_HPP

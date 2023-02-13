@@ -23,7 +23,7 @@ namespace OpFlow::lang {
         Block();
         ~Block() noexcept override;
 
-        void accept(IRVisitor *visitor) override;
+        void accept(IRVisitor* visitor) override;
 
         [[nodiscard]] const Block* get_parent() const;
         void set_parent(const Block* parent);

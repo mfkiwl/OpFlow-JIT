@@ -17,7 +17,7 @@
 namespace OpFlow::lang {
     Var &Scalar::operator=(const Expr &other) {
         if (this != &other) {
-            auto* ir_builder = IRBuilder::get_current_builder();
+            auto *ir_builder = IRBuilder::get_current_builder();
             OP_ASSERT(ir_builder);
         }
         return *this;

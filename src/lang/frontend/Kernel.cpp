@@ -11,8 +11,8 @@
 // ----------------------------------------------------------------------------
 
 #include "Kernel.hpp"
-#include "lang/program/Program.hpp"
 #include "lang/pass/IRPrinter.hpp"
+#include "lang/program/Program.hpp"
 #include "utils/Macros.hpp"
 
 namespace OpFlow::lang {

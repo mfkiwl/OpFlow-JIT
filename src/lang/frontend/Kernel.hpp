@@ -13,8 +13,8 @@
 #ifndef OPFLOW_JIT_KERNEL_HPP
 #define OPFLOW_JIT_KERNEL_HPP
 
-#include "lang/ir/IRNode.hpp"
 #include "lang/ir/Block.hpp"
+#include "lang/ir/IRNode.hpp"
 #include "lang/program/IRBuilder.hpp"
 #include "lang/program/RuntimeContext.hpp"
 #include <functional>
