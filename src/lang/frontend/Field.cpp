@@ -17,9 +17,9 @@ namespace OpFlow::lang {
 
     Field& Field::set_bc(BoundaryDescriptor* descriptor, std::unique_ptr<BC>&& bc) { return *this; }
 
-    void Field::bind_to_mesh(const Mesh* mesh, const MeshLocDescriptor& descriptor) {
+    void Field::bind_to_mesh(const Mesh* mesh, LocOnMesh loc) {
         mesh_ = mesh;
-        mesh_loc_descriptor_ = descriptor;
+        loc_ = loc;
     }
 
     Field& Field::operator=(const Expr& other) { return *this; }
@@ -28,7 +28,7 @@ namespace OpFlow::lang {
 
     FieldGroup::FieldGroup(Field& f) : fields_ {&f} {}
 
-    FieldGroup FieldGroup::operator,(Field&f) const & {
+    FieldGroup FieldGroup::operator,(Field& f) const & {
         auto ret = *this;
         ret.fields_.push_back(&f);
         return ret;
