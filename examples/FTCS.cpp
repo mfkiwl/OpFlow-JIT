@@ -11,8 +11,8 @@
 // ----------------------------------------------------------------------------
 
 #include <OpFlow.hpp>
-#include <lang/OpLang.hpp>
 #include <iostream>
+#include <lang/OpLang.hpp>
 
 using namespace OpFlow;
 using namespace OpFlow::lang;

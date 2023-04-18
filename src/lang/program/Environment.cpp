@@ -22,9 +22,10 @@ namespace OpFlow {
     void Environment::init(int argc, char **argv) {}
 
     void Environment::setMode(OpFlow::Arch arch, OpFlow::Para para) {
-        auto& env = getInstance();
+        auto &env = getInstance();
         env.arch_ = arch;
         env.para_ = para;
-        OP_INFO("Running with {}, {}", env.arch_ == Arch::x86_64 ? "x86_64" : "CUDA", env.para_ == Para::SingleNode ? "localhost" : "cluster");
+        OP_INFO("Running with {}, {}", env.arch_ == Arch::x86_64 ? "x86_64" : "CUDA",
+                env.para_ == Para::SingleNode ? "localhost" : "cluster");
     }
 }// namespace OpFlow
