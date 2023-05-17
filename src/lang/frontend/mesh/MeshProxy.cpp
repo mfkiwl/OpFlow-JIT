@@ -14,8 +14,7 @@
 #include "lang/frontend/Field.hpp"
 
 namespace OpFlow::lang {
-    MeshProxy::MeshProxy(const Mesh *mesh, LocOnMesh loc)
-        : mesh_(mesh), loc_(loc) {}
+    MeshProxy::MeshProxy(const Mesh *mesh, LocOnMesh loc) : mesh_(mesh), loc_(loc) {}
 
     void MeshProxy::place(Field &field) { field.bind_to_mesh(this->mesh_, this->loc_); }
 
